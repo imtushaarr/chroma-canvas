@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import ParticleBackground from '@/components/ParticleBackground';
 import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
+import HeroSlider from '@/components/HeroSlider';
+import CategoriesSection from '@/components/CategoriesSection';
 import ProductsSection from '@/components/ProductsSection';
 import PostersSection from '@/components/PostersSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import AnimatedLoader from '@/components/AnimatedLoader';
+import VectorDecorations from '@/components/VectorDecorations';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,12 +20,14 @@ const Index = () => {
       
       <div className={`relative min-h-screen ${isLoading ? 'overflow-hidden' : ''}`}>
         <ParticleBackground />
+        <VectorDecorations />
         <Navbar />
         <main>
-          <HeroSection />
-          <FeaturesSection />
+          <HeroSlider />
+          <CategoriesSection />
           <ProductsSection />
           <PostersSection />
+          <FeaturesSection />
           <CTASection />
         </main>
         <Footer />
