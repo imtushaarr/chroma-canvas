@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import ParticleBackground from '@/components/ParticleBackground';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import ProductsSection from '@/components/ProductsSection';
+import PostersSection from '@/components/PostersSection';
+import FeaturesSection from '@/components/FeaturesSection';
+import CTASection from '@/components/CTASection';
+import Footer from '@/components/Footer';
+import AnimatedLoader from '@/components/AnimatedLoader';
 
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      {isLoading && <AnimatedLoader onComplete={() => setIsLoading(false)} />}
+      
+      <div className={`relative min-h-screen ${isLoading ? 'overflow-hidden' : ''}`}>
+        <ParticleBackground />
+        <Navbar />
+        <main>
+          <HeroSection />
+          <FeaturesSection />
+          <ProductsSection />
+          <PostersSection />
+          <CTASection />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
