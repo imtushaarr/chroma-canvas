@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ShoppingCart, Menu, X, Search, User, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 
 const Navbar = () => {
@@ -25,11 +26,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'T-Shirts', href: '#products' },
-    { name: 'Posters', href: '#posters' },
-    { name: 'Collections', href: '#categories' },
-    { name: 'About', href: '#about' },
+    { name: 'Home', href: '/' },
+    { name: 'Products', href: '/products' },
+    { name: 'Posters', href: '/#posters' },
+    { name: 'Collections', href: '/#categories' },
+    { name: 'Cart', href: '/cart' },
   ];
 
   return (

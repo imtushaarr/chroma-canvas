@@ -11,7 +11,7 @@ const products = [
   {
     id: 1,
     name: 'CYBER PULSE TEE',
-    price: 49,
+    price: 1499,
     image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
     category: 'T-Shirts',
     isNew: true,
@@ -19,14 +19,14 @@ const products = [
   {
     id: 2,
     name: 'NEON DREAMS',
-    price: 55,
+    price: 1799,
     image: 'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80',
     category: 'T-Shirts',
   },
   {
     id: 3,
     name: 'VOID WALKER',
-    price: 45,
+    price: 1299,
     image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80',
     category: 'T-Shirts',
     isSale: true,
@@ -34,7 +34,7 @@ const products = [
   {
     id: 4,
     name: 'DIGITAL SUNSET',
-    price: 52,
+    price: 1599,
     image: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80',
     category: 'T-Shirts',
     isNew: true,
