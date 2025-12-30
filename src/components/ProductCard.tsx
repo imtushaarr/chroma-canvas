@@ -84,9 +84,9 @@ const ProductCard = ({ name, price, image, category, isNew, isSale }: ProductCar
             {name}
           </h3>
           <div className="flex items-center gap-2 mt-2">
-            <span className="text-lg font-semibold text-foreground">${price}</span>
+            <span className="text-lg font-semibold text-foreground">₹{price.toLocaleString('en-IN')}</span>
             {isSale && (
-              <span className="text-sm text-muted-foreground line-through">${(price * 1.3).toFixed(0)}</span>
+              <span className="text-sm text-muted-foreground line-through">₹{Math.round(price * 1.3).toLocaleString('en-IN')}</span>
             )}
           </div>
         </div>
